@@ -19,7 +19,7 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Install Dependencies 📦
-        run: yarn install --include dev --immutable
+        run: yarn install --immutable
       - name: Run linter 🧹
         run: yarn run lint
   build:
@@ -30,6 +30,6 @@ jobs:
         with:
           ref: ${{ github.event.pull_request.head.ref }}
       - name: Install Dependencies 📦
-        run: yarn install --include dev --immutable
+        run: yarn install --immutable
       - name: Build code 👷‍♀️
         run: yarn run build
