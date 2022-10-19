@@ -1,6 +1,6 @@
 {
   "name": "@dancrumb/testify",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "packageManager": "yarn@3.2.4",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -21,5 +21,9 @@
     "eslint-plugin-promise": "^6.0.0",
     "prettier": "^2.7.1",
     "typescript": "*"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com",
+    "access": "public"
   }
 }
