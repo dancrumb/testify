@@ -16,9 +16,12 @@ jobs:
         with:
           node-version: 16
       - run: yarn
+      - run: |
+          echo @dancrumb:https://npm.pkg.github.com/ > .npmrc
+          echo '//npm.pkg.github.com/:_authToken=${NPM_TOKEN}' >> .npmrc
       - run: npm publish
         env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   create-release:
     needs: publish
     runs-on: ubuntu-latest
